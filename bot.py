@@ -1,5 +1,5 @@
 import random, os, sys
-import tweepy
+import tweepy, time
  
 INTERVAL = 60 * 60 * 6
  
