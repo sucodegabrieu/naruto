@@ -1,7 +1,8 @@
 import random, os, sys
 import tweepy
  
-
+INTERVAL = 60 * 60 * 6
+ 
 pastas = os.listdir('pastas')
 
 numero = random.randrange(0, len(pastas))
@@ -20,8 +21,12 @@ api = tweepy.API(auth)
 file = open('pastas/' + str(foto), 'rb') 
 r1 = api.media_upload(filename='test.png', file=file) 
 
-media = [r1.media_id_string]    
-texto = ""
-api.update_status(media_ids=media, status=texto)
+while True:
+    media = [r1.media_id_string]    
+    texto = ""
+    api.update_status(media_ids=media, status=texto)
+    time.sleep(INTERVAL)
+    
+
 
 #os.remove('arquivos/' + str(foto))
