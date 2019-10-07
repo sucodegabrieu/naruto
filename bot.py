@@ -16,7 +16,7 @@ print ("Im running")
 
 while True:
     
-    api.update_status( status='ronaldo')
+    api.update_status( status='ronaldinho gaucho')
     time.sleep(INTERVAL)
     
 #os.remove('arquivos/' + str(foto))
