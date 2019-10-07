@@ -1,7 +1,7 @@
 import random, os, sys
 import tweepy, time
  
-INTERVAL = 15
+INTERVAL = 30
 
 consumer_secret = "7Vjq7JwIXK9CC8E2voKersTAUg9PPqf6HegTQsDPKpD561R3on"
 consumer_key = "rcocZOCcbmAQKfsi4tPkitjqY"
@@ -12,24 +12,12 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-print('ronaldo')
+
 
 while True:
     
-    print('ronaldo')
-    arquivos = os.listdir('pastas')
 
-    numero = random.randrange(0, len(pastas))
-                   
-    foto = pastas[numero]
-
-    file = open('pastas/' + str(foto), 'rb') 
-    r1 = api.media_upload(filename='test.png', file=file)
-    
-    
-    media = [r1.media_id_string]    
-    texto = ""
-    api.update_status(media_ids=media, status=texto)
+    api.update_status(media_ids=media, status='ronaldo')
     time.sleep(INTERVAL)
     
 #os.remove('arquivos/' + str(foto))
