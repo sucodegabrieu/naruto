@@ -12,11 +12,10 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-
+print ("Im running")
 
 while True:
     
-
     api.update_status(media_ids=media, status='ronaldo')
     time.sleep(INTERVAL)
     
