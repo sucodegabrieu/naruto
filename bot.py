@@ -12,8 +12,11 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
+print('ronaldo')
 
 while True:
+    
+    print('ronaldo')
     arquivos = os.listdir('pastas')
 
     numero = random.randrange(0, len(pastas))
